@@ -91,4 +91,5 @@ il s'agit juste d'une information supplémentaire pour la personnalisation du pe
 
 A la création de personnage, l'utilisateur choisit en premier la race du personnage et ensuite sa classe et sexe. 
 La personnalisation se poursuit par le choix de la couleur de peau, la taille, sa couleur de cheveux, sa coupe de cheveux,
-sa pilosité, l'aspect de son corps.
+sa pilosité, l'aspect de son corps. 
+En fonction de ces choix le poids du personnage est calculé.
