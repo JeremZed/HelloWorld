@@ -86,5 +86,5 @@ Il est composé d'un nombre limité de place.
 Il n'y a pas de notion de mana. Il y a uniquement une barre de vie et d'expérience. Chaque compétence ne consomme aucune
 energie, mana etc... il y a juste un temps de recharge.
 
-Un personnage peut être du sexe Masculin ou Féminin, Est droitier ou gaucher. Cela n'influe pas sur le systeme de jeu, juste
-une information supplémentaire pour la personnalisation du personnage.
+Un personnage peut être du sexe Masculin ou Féminin, Est droitier ou gaucher. Cela n'influe pas sur le systeme de jeu, 
+il s'agit juste d'une information supplémentaire pour la personnalisation du personnage.
