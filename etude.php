@@ -62,6 +62,7 @@ La race non jouable est Holik.
       Le premier être est issu de la sorcelerie, malheureusement il a reussi à appliquer se dupliquer grâce à la magie
       et à la naiveté de son créateur. Et depuis ce moment il ne cesse de créer d'autres créatures, toutes aussi
       immonde les unes que les autres.
+      
 Chaque personnage possède un équipement; celui-ci est constitué de la manière suivante.
   # Armure
   - Tête
@@ -79,6 +80,10 @@ Chaque personnage possède un équipement; celui-ci est constitué de la manièr
   - Cou
   - Bague
   - Bague
+  
 En plus de son équipement, le personnage possède un inventaire. Il permet de stocker tous les items qui peut ramasser.
 Il est composé d'un nombre limité de place.
-Il n'y a pas de notion de mana. Il y a uniquement une barre de vie et d'expérience. Chaque compétence
+Il n'y a pas de notion de mana. Il y a uniquement une barre de vie et d'expérience. Chaque compétence ne consomme aucune
+energie, mana etc... il y a juste un temps de recharge.
+
+
