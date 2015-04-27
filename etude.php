@@ -1,29 +1,31 @@
+<?php
+
 Chaque classe peut faire le tank, le DPS, le heal.
-Liste des différentes classes:
+Liste des diffÃ©rentes classes:
   - Guerrier
   - Mage
   - Rodeur
   - Moine
   
-Ce qui veut dire qu'un Guerrier peut être le Heal du groupe comme le Tank, idem pour le Moine, le Mage et le Rodeur.
-Ce qui différencie une classe d'une autre, ce sont les compétences. Par exemple un Moine aura plus de compétence de 
-soin qu'un Rodeur. Et inversement un Rodeur aura plus de compétence de DPS qu'un Moine. Mais il n'empêche qu'un Moine
-peut être utilisé comme DPS dans un groupe.
-Chaque classe peut porter les différents type d'armure / arme.
+Ce qui veut dire qu'un Guerrier peut Ãªtre le Heal du groupe comme le Tank, idem pour le Moine, le Mage et le Rodeur.
+Ce qui diffÃ©rencie une classe d'une autre, ce sont les compÃ©tences. Par exemple un Moine aura plus de compÃ©tence de 
+soin qu'un Rodeur. Et inversement un Rodeur aura plus de compÃ©tence de DPS qu'un Moine. Mais il n'empÃªche qu'un Moine
+peut Ãªtre utilisÃ© comme DPS dans un groupe.
+Chaque classe peut porter les diffÃ©rents type d'armure / arme.
 Les types d'armures sont:
   - Tissu
   - Cuir
   - Maille
   - Plate
-Le type d'armure avantage certaine caractéristique:
-  - Le niveau de défense des armures : Plate > Maille > Cuir > Tissu
-  - Le niveau de dextérité des armures : Tissu > Cuir > Maille > Plate
+Le type d'armure avantage certaine caractÃ©ristique:
+  - Le niveau de dÃ©fense des armures : Plate > Maille > Cuir > Tissu
+  - Le niveau de dextÃ©ritÃ© des armures : Tissu > Cuir > Maille > Plate
   
 Les types d'armes sont:
-  - Epée -- 1 main
+  - EpÃ©e -- 1 main
   - Lance -- 2 mains
   - Dague -- 1 main
-  - Bâton -- 2 mains
+  - BÃ¢ton -- 2 mains
   - Bouclier -- 1 main
   - Marteau -- 1 main
   - Espadon -- 2 mains
@@ -38,31 +40,31 @@ Les races jouables sont:
       Aspect : 
         Etre vivant d'apect humaine standard.
       Description :
-        Premier peuple à fouler les étendues de Pangline
+        Premier peuple Ã  fouler les Ã©tendues de Pangline
   - Grem's
       Aspect :
-        Etre vivant de petite taille, doué d'une forte intelligence. Il mesure 1/3 de la taille d'un humain 
+        Etre vivant de petite taille, douÃ© d'une forte intelligence. Il mesure 1/3 de la taille d'un humain 
       Description : 
-        Ce peuple est apparut bien des siècles après celui des humains, comment ? on ne le sait toujours pas.
-        Il s'agit du secret le mieux gardé de leur civilisation.
+        Ce peuple est apparut bien des siÃ¨cles aprÃ¨s celui des humains, comment ? on ne le sait toujours pas.
+        Il s'agit du secret le mieux gardÃ© de leur civilisation.
   - Touchar
       Aspect :
         Etre vivant de taille normale, ne supportant pas les rayons du soleil. La couleur de peau est de tendance
-        pâle.
+        pÃ¢le.
       Description :
-        Ce peuple étrange et sauvage, possède un grand ennemi... Le soleil, en effet leurs cellules se désintègrent
-        aux lueur du soleil. Pour survivre ils sont obligés de vivre la nuit.
+        Ce peuple Ã©trange et sauvage, possÃ¨de un grand ennemi... Le soleil, en effet leurs cellules se dÃ©sintÃ¨grent
+        aux lueur du soleil. Pour survivre ils sont obligÃ©s de vivre la nuit.
         
 La race non jouable est Holik.
     Aspect : 
-      Sombre, de toutes corpulance. Démoniaque.
+      Sombre, de toutes corpulance. DÃ©moniaque.
     Description : 
-      Le premier être est issu de la sorcelerie, malheureusement il a reussi à appliquer se dupliquer grâce à la magie
-      et à la naiveté de son créateur. Et depuis ce moment il ne cesse de créer d'autres créatures, toutes aussi
+      Le premier Ãªtre est issu de la sorcelerie, malheureusement il a reussi Ã  appliquer se dupliquer grÃ¢ce Ã  la magie
+      et Ã  la naivetÃ© de son crÃ©ateur. Et depuis ce moment il ne cesse de crÃ©er d'autres crÃ©atures, toutes aussi
       immonde les unes que les autres.
-Chaque personnage possède un équipement; celui-ci est constitué de la manière suivante.
+Chaque personnage possÃ¨de un Ã©quipement; celui-ci est constituÃ© de la maniÃ¨re suivante.
   # Armure
-  - Tête
+  - TÃªte
   - Epaule
   - Torse
   - Jambe
@@ -77,6 +79,6 @@ Chaque personnage possède un équipement; celui-ci est constitué de la manière su
   - Cou
   - Bague
   - Bague
-En plus de son équipement, le personnage possède un inventaire. Il permet de stocker tous les items qui peut ramasser.
-Il est composé d'un nombre limité de place.
-Il n'y a pas de notion de mana. Il y a uniquement une barre de vie et d'expérience. Chaque compétence
+En plus de son Ã©quipement, le personnage possÃ¨de un inventaire. Il permet de stocker tous les items qui peut ramasser.
+Il est composÃ© d'un nombre limitÃ© de place.
+Il n'y a pas de notion de mana. Il y a uniquement une barre de vie et d'expÃ©rience. Chaque compÃ©tence
