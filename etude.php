@@ -88,3 +88,7 @@ energie, mana etc... il y a juste un temps de recharge.
 
 Un personnage peut être du sexe Masculin ou Féminin, être droitier ou gaucher. Cela n'influe pas sur le systeme de jeu, 
 il s'agit juste d'une information supplémentaire pour la personnalisation du personnage.
+
+A la création de personnage, l'utilisateur choisit en premier la race du personnage et ensuite sa classe et sexe. 
+La personnalisation se poursuit par le choix de la couleur de peau, la taille, sa couleur de cheveux, sa coupe de cheveux,
+sa pilosité, l'aspect de son corps.
