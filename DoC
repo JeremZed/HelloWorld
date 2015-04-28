@@ -9,6 +9,10 @@ Masculin extends Sexe
   
 Feminin extends Sexe
   - __construct() > Sexe.setLibelle(str)
+  
+Apparence
+  - taille            : float
+  - 
 
 abstract Personnage
   - nom               : string
@@ -16,3 +20,4 @@ abstract Personnage
   - gaucher           : bool
   - experience        : int
   - sexe              : Sexe
+  - apparence         : Apparence
