@@ -1,0 +1,18 @@
+
+abstract Sexe
+  - libelle           : string
+  - setLibelle(str)
+  - getLibelle()
+  
+Masculin extends Sexe
+  - __construct() > Sexe.setLibelle(str)
+  
+Feminin extends Sexe
+  - __construct() > Sexe.setLibelle(str)
+
+abstract Personnage
+  - nom               : string
+  - droitier          : bool
+  - gaucher           : bool
+  - experience        : int
+  - sexe              : Sexe.getLibelle()
