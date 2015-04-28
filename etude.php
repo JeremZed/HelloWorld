@@ -96,3 +96,6 @@ En fonction de ces choix le poids du personnage est calculé.
 
 Les compétences et l'amélioration des caractéristiques du personnage se fait via un sphérié. Chaque sphère est débloquée
 via des PO ou via des quêtes. Plus on achète des sphères plus le prix augmente.
+
+L'expérience est nécessaire pour calculer le niveau du personnage. C'est ce niveau de personnage qui permet de débloquer
+des donjons, porter des armes / armures.
