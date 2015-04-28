@@ -100,4 +100,6 @@ via des PO ou via des quêtes. Plus on achète des sphères plus le prix augment
 L'expérience est nécessaire pour calculer le niveau du personnage. C'est ce niveau de personnage qui permet de débloquer
 des donjons, porter des armes / armures, améliorer ses caractéristiques de base.
 Il n'y a pas de limite de niveau, mais la courbe de progression des niveaux est exponentielle. C'est à dire progression
-rapide au début mais de plus en plus lente au fil du temps.
+rapide au début mais de plus en plus lente au fil du temps (Tout en restant raisonnable sur l'expérience à acquérir
+pour les haut level ).
+
