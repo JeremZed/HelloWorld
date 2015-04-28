@@ -15,4 +15,4 @@ abstract Personnage
   - droitier          : bool
   - gaucher           : bool
   - experience        : int
-  - sexe              : Sexe.getLibelle()
+  - sexe              : Sexe
