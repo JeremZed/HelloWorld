@@ -98,4 +98,4 @@ Les compétences et l'amélioration des caractéristiques du personnage se fait 
 via des PO ou via des quêtes. Plus on achète des sphères plus le prix augmente.
 
 L'expérience est nécessaire pour calculer le niveau du personnage. C'est ce niveau de personnage qui permet de débloquer
-des donjons, porter des armes / armures.
+des donjons, porter des armes / armures, améliorer ses caractéristiques de base.
