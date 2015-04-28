@@ -94,4 +94,5 @@ La personnalisation se poursuit par le choix de la couleur de peau, la taille, s
 sa pilosité, l'aspect de son corps. 
 En fonction de ces choix le poids du personnage est calculé.
 
-
+Les compétences et l'amélioration des caractéristiques du personnage se fait via un sphérié. Chaque sphère est débloquée
+via des PO ou via des quêtes. Plus on achète des sphères plus le prix augmente.
