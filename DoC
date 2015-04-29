@@ -509,6 +509,7 @@ abstract Quete
   - butin               : Collection Item
   - niveau              : int
   - dependance          : Quete
+  - realiser            : bool
   - getNom()
   - setnom(str)
   - getDescription()
@@ -523,6 +524,8 @@ abstract Quete
   - setNiveau(int)
   - getDependance()
   - setDependance(Quete)
+  - getRealiser()
+  - getSetRealiser(bool)
   
 QueteSauverLaPoule extends Quete
   - __construct() > Quete.setNom(str)
