@@ -141,6 +141,23 @@ Mage extends Classe
   
 Moine extends Classe
   - __construt() > Classe.setLibelle(str)
+  
+abstract Competence
+  - libelle           : string
+  - description       : string
+  - type              : string
+  - value             : string
+  - caracteristique   : string
+  - getLibelle()
+  - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
+  - getType()
+  - setType(str)
+  - getValue()
+  - setValue(str)
+  - getCaracteristique()
+  - setCaracteristique(str)
 
 abstract Personnage
   - nom               : string
@@ -167,3 +184,8 @@ abstract Personnage
   - setRace(Race)
   - getClasse()
   - setClasse(Classe)
+  - getNiveau()
+  - getCalculNiveau()
+  
+Player extends Personnage
+  - __construct() > Personnage.setNom(str)  
