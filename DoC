@@ -109,6 +109,15 @@ abstract Race
   - libelle           : string
   - getLibelle()
   - setLibelle(str)
+  
+Humain extends Race
+  - __construct() > Race.setLibelle(str)
+  
+Grems extends Race
+  - __construct() > Race.setLibelle(str)
+  
+Touchar extends Race
+  - __construct() > Race.setLibelle(str)
 
 abstract Personnage
   - nom               : string
