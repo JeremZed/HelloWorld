@@ -464,4 +464,7 @@ abstract Personnage
   - setRecette(Recettes)
   
 Player extends Personnage
-  - __construct() > Personnage.setNom(str)  
+  - __construct() > Personnage.setNom(str) 
+
+PNJ extends Personnage
+  - __construct() > Personnage.setNom(str)
