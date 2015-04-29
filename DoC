@@ -107,8 +107,11 @@ Apparence
   
 abstract Race
   - libelle           : string
+  - description       : string
   - getLibelle()
   - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
   
 Humain extends Race
   - __construct() > Race.setLibelle(str)
