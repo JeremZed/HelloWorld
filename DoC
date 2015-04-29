@@ -342,6 +342,24 @@ Caracteristiques
   - getVieTotale()
   - getVieEnCours()
   - setVieEnCours(int)
+  
+Inventaire
+  - capacite          : int
+  - items             : Collection Item
+  - getCapacite()
+  - setCapacite(int)
+  - addItem(Item)
+  - removeItem(Item)
+  - sort()
+  
+Banque
+  - capacite          : int
+  - items             : Collection Item
+  - getCapacite()
+  - setCapacite(int)
+  - addItem(Item)
+  - removeItem(Item)
+  - sort()
 
 abstract Personnage
   - nom               : string
