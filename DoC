@@ -372,6 +372,8 @@ abstract Personnage
   - classe            : Classe
   - equipement        : Stuff
   - caracteristique   : Caracteristiques
+  - inventaire        : Inventaire
+  - banque            : Banque
   - getNom()
   - setNom(str)
   - getDroitier()
@@ -394,6 +396,10 @@ abstract Personnage
   - setEquipement(Stuff)
   - getCaracteristique()
   - setCaracteristique(Caracteristiques)
+  - getInventaire()
+  - setinventaire(Inventaire)
+  - getBanque()
+  - setBanque(Banque)
   
 Player extends Personnage
   - __construct() > Personnage.setNom(str)  
