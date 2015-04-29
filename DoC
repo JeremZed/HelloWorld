@@ -524,3 +524,8 @@ abstract Quete
   - getDependance()
   - setDependance(Quete)
   
+QueteSauverLaPoule extends Quete
+  - __construct() > Quete.setNom(str)
+  
+
+  
