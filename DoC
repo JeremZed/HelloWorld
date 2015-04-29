@@ -188,7 +188,7 @@ EquipementTete extends Equipement
 EquipementEpaule extends Equipement
   - __construct() > Equipement.setLibelle(str)
   
-EquipementMain extends Equipement
+EquipementGant extends Equipement
   - __construct() > Equipement.setLibelle(str)
 
 EquipementTorse extends Equipement
@@ -198,6 +198,27 @@ EquipementJambe extends Equipement
   - __construct() > Equipement.setLibelle(str)
 
 EquipementPied extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementMainDroite extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementMainGauche extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementOreilleGauche extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementOreilleDroite extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementCou extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementBague1 extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementBague2 extends Equipement
   - __construct() > Equipement.setLibelle(str)
 
 abstract Personnage
