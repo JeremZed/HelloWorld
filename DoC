@@ -142,7 +142,7 @@ Mage extends Classe
 Moine extends Classe
   - __construt() > Classe.setLibelle(str)
   
-abstract Competence
+abstract Skill
   - libelle           : string
   - description       : string
   - type              : string
@@ -158,6 +158,18 @@ abstract Competence
   - setValue(str)
   - getCaracteristique()
   - setCaracteristique(str)
+  
+SkillBouleDeFeu extends Skill
+  - __construct() > Skill.setLibelle(str)
+  
+SkillTirTendu extends Skill
+  - __construct() > Skill.setLibelle(str)
+  
+SkillFrappeFeroce extends Skill
+  - __construct() > Skill.setLibelle(str)
+  
+SkillEclatDeLumiere extends Skill
+  - __construct() > Skill.setLibelle(str)
 
 abstract Personnage
   - nom               : string
