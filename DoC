@@ -31,11 +31,23 @@ Cheveux
   - setCoupe(str)
   - getSrc()
   - setSrc(str)
+  
+Pilosite
+  - libelle
+  - couleur
+  - src
+  - getLibelle()
+  - setLibelle(str)
+  - getCouleur()
+  - setCouleur(str)
+  - getSrc()
+  - setSrc($str)
 
 Apparence
   - taille            : float
   - peau              : Peau
   - cheveux           : Cheveux
+  - pilosite          : Pilosite
 
 abstract Personnage
   - nom               : string
