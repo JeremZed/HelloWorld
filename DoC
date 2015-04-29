@@ -332,9 +332,16 @@ CaracteristiqueDexterite extends Caracteristique
   - __construct() > Caracteristique.setLibelle(str)
   
 Caracteristiques
+  - vieTotale         : int
+  - vieEnCours        : int
   - caracteristiques  : Collection Caracteristique
   - getCaracteristiques()
   - addCaracteristique(Caracteristique)
+  - getCaracteristique(id)
+  - calculVieTotale()
+  - getVieTotale()
+  - getVieEnCours()
+  - setVieEnCours(int)
 
 abstract Personnage
   - nom               : string
