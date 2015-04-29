@@ -482,3 +482,4 @@ abstract Mob
   - caracteristiques    : Caracteristiques
   - equipement          : Stuff
   - butin               : Collection Items
+  - competences         : Collection Skill
