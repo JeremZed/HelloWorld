@@ -49,7 +49,13 @@ Apparence
   - cheveux           : Cheveux
   - pilosite          : Pilosite
   - getTaille()
-  - setTaille()
+  - setTaille(int)
+  - getPeau()
+  - setPeau(Peau)
+  - getCheveux()
+  - setCheveux(Cheveux)
+  - getPilosite()
+  - setPilosite(Pilosite)
 
 abstract Personnage
   - nom               : string
