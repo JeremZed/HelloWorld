@@ -42,12 +42,21 @@ Pilosite
   - setCouleur(str)
   - getSrc()
   - setSrc($str)
-
+  
+Corpulence
+  - libelle           : string
+  - src               : string
+  - getLibelle()
+  - setLibelle(str)
+  - getSrc()
+  - setSrc(str)
+  
 Apparence
   - taille            : float
   - peau              : Peau
   - cheveux           : Cheveux
   - pilosite          : Pilosite
+  - corpulence        : Corpulence
   - getTaille()
   - setTaille(int)
   - getPeau()
@@ -56,6 +65,8 @@ Apparence
   - setCheveux(Cheveux)
   - getPilosite()
   - setPilosite(Pilosite)
+  - getCorpulence()
+  - setCorpulence(Corpulence)
 
 abstract Personnage
   - nom               : string
