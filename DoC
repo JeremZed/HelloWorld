@@ -129,6 +129,18 @@ abstract Classe
   - setLibelle(str)
   - getDescription()
   - setDescription(str)
+  
+Guerrier extends Classe
+  - __construt() > Classe.setLibelle(str)
+  
+Rodeur extends Classe
+  - __construt() > Classe.setLibelle(str)
+  
+Mage extends Classe
+  - __construt() > Classe.setLibelle(str)
+  
+Moine extends Classe
+  - __construt() > Classe.setLibelle(str)
 
 abstract Personnage
   - nom               : string
