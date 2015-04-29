@@ -410,6 +410,12 @@ RecetteHaumeStandard extends Recette
   
 RecetteEpeeEnBois extends Recette
   - __construct() > Recette.setLibelle(str)
+  
+Recettes
+  - recettes          : Collection Recette
+  - addRecette(Recette)
+  - getRecettes()
+  - getRecette(id)
 
 abstract Personnage
   - nom               : string
@@ -425,6 +431,7 @@ abstract Personnage
   - inventaire        : Inventaire
   - banque            : Banque
   - metier            : Professions
+  - recette           : Recettes
   - getNom()
   - setNom(str)
   - getDroitier()
@@ -453,6 +460,8 @@ abstract Personnage
   - setBanque(Banque)
   - getMetier()
   - setMetier(Professions)
+  - getRecette()
+  - setRecette(Recettes)
   
 Player extends Personnage
   - __construct() > Personnage.setNom(str)  
