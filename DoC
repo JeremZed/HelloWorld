@@ -51,6 +51,14 @@ CheveuxCourt extends Cheveux
 CheveuxRase extends Cheveux
   - __construct() > Cheveux.setLibelle(str)
   
+abstract Couleur
+  - libelle           : string
+  - getLibelle()
+  - setLibelle(str)
+  
+CouleurRouge extends Couleur
+  - __construct() > Couleur.setLibelle(str)
+  
 abstract Pilosite
   - libelle           : string
   - couleur           : string
