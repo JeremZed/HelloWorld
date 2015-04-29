@@ -386,6 +386,30 @@ Professions
   - addMetier()
   - getMetiers()
   - getMetier(id)
+  
+abstract Recette
+  - libelle           : string
+  - description       : string
+  - metier            : Metier
+  - niveau            : int
+  - items             : Collection Item
+  - getLibelle()
+  - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
+  - getMetier()
+  - setMetier(Metier)
+  - getNiveau()
+  - setNiveau(int)
+  - getItems()
+  - addItem(Item)
+  - getItem(id)
+  
+RecetteHaumeStandard extends Recette
+  - __construct() > Recette.setLibelle(str)
+  
+RecetteEpeeEnBois extends Recette
+  - __construct() > Recette.setLibelle(str)
 
 abstract Personnage
   - nom               : string
