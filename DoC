@@ -53,6 +53,7 @@ Corpulence
   
 Apparence
   - taille            : float
+  - poids             : float
   - peau              : Peau
   - cheveux           : Cheveux
   - pilosite          : Pilosite
@@ -67,6 +68,8 @@ Apparence
   - setPilosite(Pilosite)
   - getCorpulence()
   - setCorpulence(Corpulence)
+  - getPoids()
+  - calculPoids()
 
 abstract Personnage
   - nom               : string
@@ -75,3 +78,4 @@ abstract Personnage
   - experience        : int
   - sexe              : Sexe
   - apparence         : Apparence
+  - 
