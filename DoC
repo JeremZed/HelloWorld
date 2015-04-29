@@ -9,10 +9,416 @@ Masculin extends Sexe
   
 Feminin extends Sexe
   - __construct() > Sexe.setLibelle(str)
+
+abstract Peau
+  - libelle           : string
+  - src               : string // Path où trouver la représentation de la peau
+  - setLibelle(str)
+  - getLibelle()
+  - setSrc(str)
+  - getSrc()
+  
+PeauNoir extends Peau
+  - __construct() > Peau.setLibelle(str)
+
+PeauBleue extends Peau
+  - __construct() > Peau.setLibelle(str)
+  
+PeauBlanche extends Peau
+  - __construct() > Peau.setLibelle(str)
+  - getOdeur()
+  
+abstract Cheveux
+  - libelle           : string
+  - couleur           : Couleur
+  - src               : string
+  - getLibelle()
+  - setLibelle(str)
+  - getCouleur()
+  - setCouleur(str)
+  - getSrc()
+  - setSrc(str)
+  
+CheveuxLong extends Cheveux
+  - __construct() > Cheveux.setLibelle(str)
+  
+CheveuxCourt extends Cheveux
+  - __construct() > Cheveux.setLibelle(str)
+  
+CheveuxRase extends Cheveux
+  - __construct() > Cheveux.setLibelle(str)
+  
+abstract Couleur
+  - libelle           : string
+  - getLibelle()
+  - setLibelle(str)
+  
+CouleurRouge extends Couleur
+  - __construct() > Couleur.setLibelle(str)
+  
+abstract Pilosite
+  - libelle           : string
+  - couleur           : Couleur
+  - src               : string
+  - getLibelle()
+  - setLibelle(str)
+  - getCouleur()
+  - setCouleur(str)
+  - getSrc()
+  - setSrc($str)
+  
+PilositeBarbe extends Pilosite
+  - __construct() > Pilosite.setLibelle(str)
+  
+PilositeAucune extends Pilosite
+  - __construct() > Pilosite.setLibelle(str)
+  
+abstract Corpulence
+  - libelle           : string
+  - src               : string
+  - getLibelle()
+  - setLibelle(str)
+  - getSrc()
+  - setSrc(str)
+  
+CorpulenceGros extends Corpulence
+  - __construct() > Corpulence.setLibelle(str)
+  
+CorpulenceMince extends Corpulence
+  - __construct() > Corpulence.setLibelle(str)
+  
+CorpulenceAthletique extends Corpulence
+  - __construct() > Corpulence.setLibelle(str)
   
 Apparence
   - taille            : float
-  - 
+  - poids             : float
+  - peau              : Peau
+  - cheveux           : Cheveux
+  - pilosite          : Pilosite
+  - corpulence        : Corpulence
+  - getTaille()
+  - setTaille(int)
+  - getPeau()
+  - setPeau(Peau)
+  - getCheveux()
+  - setCheveux(Cheveux)
+  - getPilosite()
+  - setPilosite(Pilosite)
+  - getCorpulence()
+  - setCorpulence(Corpulence)
+  - getPoids()
+  - calculPoids()
+  
+abstract Race
+  - libelle           : string
+  - description       : string
+  - getLibelle()
+  - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
+  
+Humain extends Race
+  - __construct() > Race.setLibelle(str)
+  
+Grems extends Race
+  - __construct() > Race.setLibelle(str)
+  
+Touchar extends Race
+  - __construct() > Race.setLibelle(str)
+  
+Holik extends Race
+  - __construct() > Race.setLibelle(str)
+  
+abstract Classe
+  - libelle           : string
+  - description       : string
+  - skills            : Collection Skill
+  - getLibelle()
+  - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
+  - getSkills()
+  - setSkills(Collection Skill)
+  - getSkill(str)
+  
+Guerrier extends Classe
+  - __construt() > Classe.setLibelle(str)
+  
+Rodeur extends Classe
+  - __construt() > Classe.setLibelle(str)
+  
+Mage extends Classe
+  - __construt() > Classe.setLibelle(str)
+  
+Moine extends Classe
+  - __construt() > Classe.setLibelle(str)
+  
+abstract Skill
+  - libelle           : string
+  - description       : string
+  - type              : string
+  - value             : string
+  - caracteristique   : string
+  - getLibelle()
+  - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
+  - getType()
+  - setType(str)
+  - getValue()
+  - setValue(str)
+  - getCaracteristique()
+  - setCaracteristique(str)
+  
+SkillBouleDeFeu extends Skill
+  - __construct() > Skill.setLibelle(str)
+  
+SkillTirTendu extends Skill
+  - __construct() > Skill.setLibelle(str)
+  
+SkillFrappeFeroce extends Skill
+  - __construct() > Skill.setLibelle(str)
+  
+SkillEclatDeLumiere extends Skill
+  - __construct() > Skill.setLibelle(str)
+
+abstract Rarete
+  - libelle           : string  
+  - description       : string
+  - getLibelle()
+  - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
+  
+RareteCommun extends Rarete
+  - __construct() > Rarete.setLibelle(str)
+  
+RareteVert extends Rarete
+  - __construct() > Rarete.setLibelle(str)
+  
+RareteGold extends Rarete
+  - __construct() > Rarete.setLibelle(str)
+
+RareteLegend extends Rarete
+  - __construct() > Rarete.setLibelle(str)
+  
+abstract TypeItem
+  - libelle           : string
+  - getLibelle()
+  - setLibelle(str)
+  
+TypeItemArme extends TypeItem
+  - __construct() > TypeItem.setLibelle(str)
+  
+TypeItemArmure extends TypeItem
+  - __construct() > TypeItem.setLibelle(str)
+  
+TypeItemConsommable extends TypeItem
+  - __construct() > TypeItem.setLibelle(str)
+  
+TypeItemCompos extends TypeItem
+  - __construct() > TypeItem.setLibelle(str)
+  
+abstract Item
+  - libelle           : string
+  - description       : string
+  - type              : TypeItem
+  - rarete            : Rarete
+  - tauxLoot          : float
+  - getLibelle()
+  - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
+  - getType()
+  - setType(str)
+  - getRarete()
+  - setRarete(Rarete)
+  - getTauxLoot()
+  - setTauxLoot(float)
+  
+ItemEpeeDeFeu extends Item
+  - __construct() > Item.setLibelle(str)
+
+abstract TypeEquipement
+  - libelle
+  - getLibelle()
+  - setLibelle(str)
+  
+TypeEquipementArme extends TypeEquipement
+  - __construct() > TypeEquipement.setLibelle(str)
+  
+TypeEquipementArmure extends TypeEquipement
+  - __construct() > TypeEquipement.setLibelle(str)
+  
+TypeEquipementBijou extends TypeEquipement
+  - __construct() > TypeEquipement.setLibelle(str)
+  
+abstract Equipement
+  - libelle           : string
+  - type              : TypeEquipement
+  - item              : Item
+  - getLibelle()
+  - setLibelle(str)
+  - getType()
+  - setType(str)
+  - getItem()
+  - setItem(Item)
+  
+EquipementTete extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+
+EquipementEpaule extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementGant extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+
+EquipementTorse extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+
+EquipementJambe extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+
+EquipementPied extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementMainDroite extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementMainGauche extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementOreilleGauche extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementOreilleDroite extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementCou extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementBague1 extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementBague2 extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+Stuff
+  - equipements       : Collection Equipement
+  - getEquipements()
+  - addEquipement(Equipement)
+  
+abstract Caracteristique
+  - libelle           : string
+  - value             : int
+  - getLibelle()
+  - setLibelle(str)
+  - getValue()
+  - setValue(int)
+  - downgrade(int)
+  - upgrade(int)
+  
+CaracteristiqueVitalite extends Caracteristique
+  - __construct() > Caracteristique.setLibelle(str)
+  
+CaracteristiqueForce extends Caracteristique
+  - __construct() > Caracteristique.setLibelle(str)
+  
+CaracteristiquePrecision extends Caracteristique
+  - __construct() > Caracteristique.setLibelle(str)
+  
+CaracteristiqueRobustesse extends Caracteristique
+  - __construct() > Caracteristique.setLibelle(str)
+  
+CaracteristiqueDexterite extends Caracteristique
+  - __construct() > Caracteristique.setLibelle(str)
+  
+Caracteristiques
+  - vieTotale         : int
+  - vieEnCours        : int
+  - caracteristiques  : Collection Caracteristique
+  - getCaracteristiques()
+  - addCaracteristique(Caracteristique)
+  - getCaracteristique(id)
+  - calculVieTotale()
+  - getVieTotale()
+  - getVieEnCours()
+  - setVieEnCours(int)
+  
+Inventaire
+  - capacite          : int
+  - items             : Collection Item
+  - getCapacite()
+  - setCapacite(int)
+  - addItem(Item)
+  - removeItem(Item)
+  - sort()
+  
+Banque
+  - capacite          : int
+  - items             : Collection Item
+  - getCapacite()
+  - setCapacite(int)
+  - addItem(Item)
+  - removeItem(Item)
+  - sort()
+  
+abstract Metier
+  - libelle           : string
+  - description       : string
+  - experience        : int
+  - getLibelle()
+  - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
+  - getExperience()
+  - setExperience(int)
+  
+MetierCouturier extends Metier
+  - __construct() > Metier.setLibelle(str)
+  
+MetierAlchimiste extends Metier
+  - __construct() > Metier.setLibelle(str)
+  
+MetierForgeron extends Metier
+  - __construct() > Metier.setLibelle(str)
+  
+Professions
+  - metiers           : Collection Metier
+  - addMetier()
+  - getMetiers()
+  - getMetier(id)
+  
+abstract Recette
+  - libelle           : string
+  - description       : string
+  - metier            : Metier
+  - niveau            : int
+  - items             : Collection Item
+  - getLibelle()
+  - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
+  - getMetier()
+  - setMetier(Metier)
+  - getNiveau()
+  - setNiveau(int)
+  - getItems()
+  - addItem(Item)
+  - getItem(id)
+  
+RecetteHaumeStandard extends Recette
+  - __construct() > Recette.setLibelle(str)
+  
+RecetteEpeeEnBois extends Recette
+  - __construct() > Recette.setLibelle(str)
+  
+Recettes
+  - recettes          : Collection Recette
+  - addRecette(Recette)
+  - getRecettes()
+  - getRecette(id)
 
 abstract Personnage
   - nom               : string
@@ -21,3 +427,108 @@ abstract Personnage
   - experience        : int
   - sexe              : Sexe
   - apparence         : Apparence
+  - race              : Race
+  - classe            : Classe
+  - equipement        : Stuff
+  - caracteristique   : Caracteristiques
+  - inventaire        : Inventaire
+  - banque            : Banque
+  - metier            : Professions
+  - recette           : Recettes
+  - getNom()
+  - setNom(str)
+  - getDroitier()
+  - setDroitier(bool)
+  - getGaucher()
+  - setGaucher(bool)
+  - getExperience()
+  - setExperience(int)
+  - getSexe()
+  - setSexe(Sexe)
+  - getApparence()
+  - setApparence(Apparence)
+  - getRace()
+  - setRace(Race)
+  - getClasse()
+  - setClasse(Classe)
+  - getNiveau()
+  - getCalculNiveau()
+  - getEquipement()
+  - setEquipement(Stuff)
+  - getCaracteristique()
+  - setCaracteristique(Caracteristiques)
+  - getInventaire()
+  - setinventaire(Inventaire)
+  - getBanque()
+  - setBanque(Banque)
+  - getMetier()
+  - setMetier(Professions)
+  - getRecette()
+  - setRecette(Recettes)
+  
+Player extends Personnage
+  - __construct() > Personnage.setNom(str) 
+
+PNJ extends Personnage
+  - __construct() > Personnage.setNom(str)
+  
+PNJRoiDesNains extends PNJ
+  - __construct() > Personnage.setNom(str)
+  
+abstract Mob
+  - nom                 : string
+  - description         : string
+  - niveau              : int
+  - caracteristiques    : Caracteristiques
+  - equipement          : Stuff
+  - butin               : Collection Item
+  - competences         : Collection Skill
+  - getNom()
+  - setNom(str)
+  - getDescription()
+  - setDescription(str)
+  - getNiveau()
+  - setNiveau(int)
+  - getCaracteristiques()
+  - setCaracteristiques()
+  - getStuff()
+  - setStuff(Stuff)
+  - getButin()
+  - addButin(Item)
+  - getCompetences()
+  - addCompetence(Skill)
+  
+MobLezardGeant extends Mob
+  - __construct() > Mob.setNom(str)
+  
+abstract Quete
+  - nom                 : string
+  - description         : string
+  - recompenseXp        : int
+  - recompensePo        : int
+  - butin               : Collection Item
+  - niveau              : int
+  - dependance          : Quete
+  - realiser            : bool
+  - getNom()
+  - setnom(str)
+  - getDescription()
+  - setDescription(str)
+  - getRecompenseXp()
+  - setRecompenseXp(int)
+  - getRecompensePo()
+  - setRecompensePo(int)
+  - getButin()
+  - addButin(Item)
+  - getNiveau()
+  - setNiveau(int)
+  - getDependance()
+  - setDependance(Quete)
+  - getRealiser()
+  - getSetRealiser(bool)
+  
+QueteSauverLaPoule extends Quete
+  - __construct() > Quete.setNom(str)
+  
+
+  
