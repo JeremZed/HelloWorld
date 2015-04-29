@@ -30,15 +30,12 @@ PeauBlanche extends Peau
   
 abstract Cheveux
   - libelle           : string
-  - couleur           : string
-  - coupe             : string
+  - couleur           : Couleur
   - src               : string
   - getLibelle()
   - setLibelle(str)
   - getCouleur()
   - setCouleur(str)
-  - getCoupe()
-  - setCoupe(str)
   - getSrc()
   - setSrc(str)
   
@@ -61,7 +58,7 @@ CouleurRouge extends Couleur
   
 abstract Pilosite
   - libelle           : string
-  - couleur           : string
+  - couleur           : Couleur
   - src               : string
   - getLibelle()
   - setLibelle(str)
@@ -225,10 +222,24 @@ abstract Item
   
 ItemEpeeDeFeu extends Item
   - __construct() > Item.setLibelle(str)
+
+abstract TypeEquipement
+  - libelle
+  - getLibelle()
+  - setLibelle(str)
+  
+TypeEquipementArme extends TypeEquipement
+  - __construct() > TypeEquipement.setLibelle(str)
+  
+TypeEquipementArmure extends TypeEquipement
+  - __construct() > TypeEquipement.setLibelle(str)
+  
+TypeEquipementBijou extends TypeEquipement
+  - __construct() > TypeEquipement.setLibelle(str)
   
 abstract Equipement
   - libelle           : string
-  - type              : string
+  - type              : TypeEquipement
   - item              : Item
   - getLibelle()
   - setLibelle(str)
