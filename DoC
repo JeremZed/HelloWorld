@@ -76,6 +76,15 @@ abstract Corpulence
   - getSrc()
   - setSrc(str)
   
+CorpulenceGros extends Corpulence
+  - __construct() > Corpulence.setLibelle(str)
+  
+CorpulenceMince extends Corpulence
+  - __construct() > Corpulence.setLibelle(str)
+  
+CorpulenceAthletique extends Corpulence
+  - __construct() > Corpulence.setLibelle(str)
+  
 Apparence
   - taille            : float
   - poids             : float
