@@ -203,11 +203,27 @@ RareteGold extends Rarete
 RareteLegend extends Rarete
   - __construct() > Rarete.setLibelle(str)
   
+abstract TypeItem
+  - libelle           : string
+  - getLibelle()
+  - setLibelle(str)
+  
+TypeItemArme extends TypeItem
+  - __construct() > TypeItem.setLibelle(str)
+  
+TypeItemArmure extends TypeItem
+  - __construct() > TypeItem.setLibelle(str)
+  
+TypeItemConsommable extends TypeItem
+  - __construct() > TypeItem.setLibelle(str)
+  
+TypeItemCompos extends TypeItem
+  - __construct() > TypeItem.setLibelle(str)
+  
 abstract Item
   - libelle           : string
   - description       : string
-  - type              : string
-  - categorie         : string
+  - type              : TypeItem
   - rarete            : Rarete
   - getLibelle()
   - setLibelle(str)
@@ -215,8 +231,6 @@ abstract Item
   - setDescription(str)
   - getType()
   - setType(str)
-  - setCategorie(str)
-  - getCategorie()
   - getRarete()
   - setRarete(Rarete)
   
