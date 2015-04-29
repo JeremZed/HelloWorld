@@ -360,6 +360,32 @@ Banque
   - addItem(Item)
   - removeItem(Item)
   - sort()
+  
+abstract Metier
+  - libelle           : string
+  - description       : string
+  - experience        : int
+  - getLibelle()
+  - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
+  - getExperience()
+  - setExperience(int)
+  
+MetierCouturier extends Metier
+  - __construct() > Metier.setLibelle(str)
+  
+MetierAlchimiste extends Metier
+  - __construct() > Metier.setLibelle(str)
+  
+MetierForgeron extends Metier
+  - __construct() > Metier.setLibelle(str)
+  
+Professions
+  - metiers           : Collection Metier
+  - addMetier()
+  - getMetiers()
+  - getMetier(id)
 
 abstract Personnage
   - nom               : string
@@ -374,6 +400,7 @@ abstract Personnage
   - caracteristique   : Caracteristiques
   - inventaire        : Inventaire
   - banque            : Banque
+  - metier            : Professions
   - getNom()
   - setNom(str)
   - getDroitier()
@@ -400,6 +427,8 @@ abstract Personnage
   - setinventaire(Inventaire)
   - getBanque()
   - setBanque(Banque)
+  - getMetier()
+  - setMetier(Professions)
   
 Player extends Personnage
   - __construct() > Personnage.setNom(str)  
