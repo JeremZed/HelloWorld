@@ -478,8 +478,35 @@ PNJRoiDesNains extends PNJ
 abstract Mob
   - nom                 : string
   - description         : string
-  - experience          : string
+  - niveau              : int
   - caracteristiques    : Caracteristiques
   - equipement          : Stuff
-  - butin               : Collection Items
+  - butin               : Collection Item
   - competences         : Collection Skill
+  - getNom()
+  - setNom(str)
+  - getDescription()
+  - setDescription(str)
+  - getNiveau()
+  - setNiveau(int)
+  - getCaracteristiques()
+  - setCaracteristiques()
+  - getStuff()
+  - setStuff(Stuff)
+  - getButin()
+  - addButin(Item)
+  - getCompetences()
+  - addCompetence(Skill)
+  
+MobLezardGeant extends Mob
+  - __construct() > Mob.setNom(str)
+  
+abstract Quete
+  - nom                 : string
+  - description         : string
+  - recompenseXp        : int
+  - recompensePo        : int
+  - butin               : Collection Item
+  - niveau              : int
+  - dependance          : Quete
+  
