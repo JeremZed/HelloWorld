@@ -305,6 +305,36 @@ Stuff
   - equipements       : Collection Equipement
   - getEquipements()
   - addEquipement(Equipement)
+  
+abstract Caracteristique
+  - libelle           : string
+  - value             : int
+  - getLibelle()
+  - setLibelle(str)
+  - getValue()
+  - setValue(int)
+  - downgrade(int)
+  - upgrade(int)
+  
+CaracteristiqueVitalite extends Caracteristique
+  - __construct() > Caracteristique.setLibelle(str)
+  
+CaracteristiqueForce extends Caracteristique
+  - __construct() > Caracteristique.setLibelle(str)
+  
+CaracteristiquePrecision extends Caracteristique
+  - __construct() > Caracteristique.setLibelle(str)
+  
+CaracteristiqueRobustesse extends Caracteristique
+  - __construct() > Caracteristique.setLibelle(str)
+  
+CaracteristiqueDexterite extends Caracteristique
+  - __construct() > Caracteristique.setLibelle(str)
+  
+Caracteristiques
+  - caracteristiques  : Collection Caracteristique
+  - getCaracteristiques()
+  - addCaracteristique(Caracteristique)
 
 abstract Personnage
   - nom               : string
@@ -316,6 +346,7 @@ abstract Personnage
   - race              : Race
   - classe            : Classe
   - equipement        : Stuff
+  - caracteristique   : Caracteristiques
   - getNom()
   - setNom(str)
   - getDroitier()
@@ -336,6 +367,8 @@ abstract Personnage
   - getCalculNiveau()
   - getEquipement()
   - setEquipement(Stuff)
+  - getCaracteristique()
+  - setCaracteristique(Caracteristiques)
   
 Player extends Personnage
   - __construct() > Personnage.setNom(str)  
