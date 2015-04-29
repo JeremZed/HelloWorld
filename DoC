@@ -122,6 +122,9 @@ Grems extends Race
 Touchar extends Race
   - __construct() > Race.setLibelle(str)
   
+Holik extends Race
+  - __construct() > Race.setLibelle(str)
+  
 abstract Classe
   - libelle           : string
   - description       : string
