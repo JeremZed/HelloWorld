@@ -42,6 +42,15 @@ abstract Cheveux
   - getSrc()
   - setSrc(str)
   
+CheveuxLong extends Cheveux
+  - __construct() > Cheveux.setLibelle(str)
+  
+CheveuxCourt extends Cheveux
+  - __construct() > Cheveux.setLibelle(str)
+  
+CheveuxRase extends Cheveux
+  - __construct() > Cheveux.setLibelle(str)
+  
 abstract Pilosite
   - libelle
   - couleur
@@ -52,6 +61,12 @@ abstract Pilosite
   - setCouleur(str)
   - getSrc()
   - setSrc($str)
+  
+PilositeBarbe extends Pilosite
+  - __construct() > Pilosite.setLibelle(str)
+  
+PilositeAucune extends Pilosite
+  - __construct() > Pilosite.setLibelle(str)
   
 abstract Corpulence
   - libelle           : string
