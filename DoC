@@ -26,6 +26,7 @@ PeauBleue extends Peau
   
 PeauBlanche extends Peau
   - __construct() > Peau.setLibelle(str)
+  - getOdeur()
   
 abstract Cheveux
   - libelle           : string
