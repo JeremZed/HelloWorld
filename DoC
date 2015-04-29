@@ -509,4 +509,18 @@ abstract Quete
   - butin               : Collection Item
   - niveau              : int
   - dependance          : Quete
+  - getNom()
+  - setnom(str)
+  - getDescription()
+  - setDescription(str)
+  - getRecompenseXp()
+  - setRecompenseXp(int)
+  - getRecompensePo()
+  - setRecompensePo(int)
+  - getButin()
+  - addButin(Item)
+  - getNiveau()
+  - setNiveau(int)
+  - getDependance()
+  - setDependance(Quete)
   
