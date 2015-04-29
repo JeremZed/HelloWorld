@@ -177,6 +177,28 @@ SkillFrappeFeroce extends Skill
   
 SkillEclatDeLumiere extends Skill
   - __construct() > Skill.setLibelle(str)
+  
+abstract Equipement
+  - libelle           : string
+  - type              : string
+  
+EquipementTete extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+
+EquipementEpaule extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+  
+EquipementMain extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+
+EquipementTorse extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+
+EquipementJambe extends Equipement
+  - __construct() > Equipement.setLibelle(str)
+
+EquipementPied extends Equipement
+  - __construct() > Equipement.setLibelle(str)
 
 abstract Personnage
   - nom               : string
@@ -187,6 +209,7 @@ abstract Personnage
   - apparence         : Apparence
   - race              : Race
   - classe            : Classe
+  - equipement        : Equipement
   - getNom()
   - setNom(str)
   - getDroitier()
@@ -205,6 +228,8 @@ abstract Personnage
   - setClasse(Classe)
   - getNiveau()
   - getCalculNiveau()
+  - getEquipement()
+  - setEquipement(Equipement)
   
 Player extends Personnage
   - __construct() > Personnage.setNom(str)  
