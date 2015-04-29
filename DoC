@@ -225,6 +225,7 @@ abstract Item
   - description       : string
   - type              : TypeItem
   - rarete            : Rarete
+  - tauxLoot          : float
   - getLibelle()
   - setLibelle(str)
   - getDescription()
@@ -233,6 +234,8 @@ abstract Item
   - setType(str)
   - getRarete()
   - setRarete(Rarete)
+  - getTauxLoot()
+  - setTauxLoot(float)
   
 ItemEpeeDeFeu extends Item
   - __construct() > Item.setLibelle(str)
@@ -468,3 +471,14 @@ Player extends Personnage
 
 PNJ extends Personnage
   - __construct() > Personnage.setNom(str)
+  
+PNJRoiDesNains extends PNJ
+  - __construct() > Personnage.setNom(str)
+  
+abstract Mob
+  - nom                 : string
+  - description         : string
+  - experience          : string
+  - caracteristiques    : Caracteristiques
+  - equipement          : Stuff
+  - butin               : Collection Items
