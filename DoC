@@ -121,6 +121,14 @@ Grems extends Race
   
 Touchar extends Race
   - __construct() > Race.setLibelle(str)
+  
+abstract Classe
+  - libelle           : string
+  - description       : string
+  - getLibelle()
+  - setLibelle(str)
+  - getDescription()
+  - setDescription(str)
 
 abstract Personnage
   - nom               : string
@@ -130,3 +138,4 @@ abstract Personnage
   - sexe              : Sexe
   - apparence         : Apparence
   - race              : Race
+  - classe            : Classe
