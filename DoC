@@ -10,7 +10,7 @@ Masculin extends Sexe
 Feminin extends Sexe
   - __construct() > Sexe.setLibelle(str)
 
-Peau
+abstract Peau
   - libelle           : string
   - src               : string // Path où trouver la représentation de la peau
   - setLibelle(str)
@@ -18,7 +18,16 @@ Peau
   - setSrc(str)
   - getSrc()
   
-Cheveux
+PeauNoir extends Peau
+  - __construct() > Peau.setLibelle(str)
+
+PeauBleue extends Peau
+  - __construct() > Peau.setLibelle(str)
+  
+PeauBlanche extends Peau
+  - __construct() > Peau.setLibelle(str)
+  
+abstract Cheveux
   - libelle           : string
   - couleur           : string
   - coupe             : string
@@ -32,7 +41,7 @@ Cheveux
   - getSrc()
   - setSrc(str)
   
-Pilosite
+abstract Pilosite
   - libelle
   - couleur
   - src
@@ -43,7 +52,7 @@ Pilosite
   - getSrc()
   - setSrc($str)
   
-Corpulence
+abstract Corpulence
   - libelle           : string
   - src               : string
   - getLibelle()
@@ -70,6 +79,11 @@ Apparence
   - setCorpulence(Corpulence)
   - getPoids()
   - calculPoids()
+  
+abstract Race
+  - libelle           : string
+  - getLibelle()
+  - setLibelle(str)
 
 abstract Personnage
   - nom               : string
@@ -78,4 +92,4 @@ abstract Personnage
   - experience        : int
   - sexe              : Sexe
   - apparence         : Apparence
-  - 
+  - race              : Race
