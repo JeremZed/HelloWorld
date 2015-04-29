@@ -151,3 +151,19 @@ abstract Personnage
   - apparence         : Apparence
   - race              : Race
   - classe            : Classe
+  - getNom()
+  - setNom(str)
+  - getDroitier()
+  - setDroitier(bool)
+  - getGaucher()
+  - setGaucher(bool)
+  - getExperience()
+  - setExperience(int)
+  - getSexe()
+  - setSexe(Sexe)
+  - getApparence()
+  - setApparence(Apparence)
+  - getRace()
+  - setRace(Race)
+  - getClasse()
+  - setClasse(Classe)
