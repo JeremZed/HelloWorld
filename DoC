@@ -125,10 +125,14 @@ Touchar extends Race
 abstract Classe
   - libelle           : string
   - description       : string
+  - skills            : Collection Skill
   - getLibelle()
   - setLibelle(str)
   - getDescription()
   - setDescription(str)
+  - getSkills()
+  - setSkills(Collection Skill)
+  - getSkill(str)
   
 Guerrier extends Classe
   - __construt() > Classe.setLibelle(str)
