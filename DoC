@@ -9,10 +9,33 @@ Masculin extends Sexe
   
 Feminin extends Sexe
   - __construct() > Sexe.setLibelle(str)
+
+Peau
+  - libelle
+  - src               // Path où trouver la représentation de la peau
+  - setLibelle(str)
+  - getLibelle()
+  - setSrc(str)
+  - getSrc()
   
+Cheveux
+  - libelle
+  - couleur
+  - coupe
+  - src
+  - getLibelle()
+  - setLibelle(str)
+  - getCouleur()
+  - setCouleur(str)
+  - getCoupe()
+  - setCoupe(str)
+  - getSrc()
+  - setSrc(str)
+
 Apparence
   - taille            : float
-  - 
+  - peau              : Peau
+  - cheveux           : Cheveux
 
 abstract Personnage
   - nom               : string
