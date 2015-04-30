@@ -1,7 +1,7 @@
 <?php 
 namespace Core;
 
-use Core\Collection\CollectionSkill;
+use Core\Collection;
 
 abstract class Classe
 {
@@ -28,7 +28,7 @@ abstract class Classe
 		$this->libelle = $libelle;
 	}
 	
-	public function setSkills(CollectionSkill $skills)
+	public function setSkills(Collection $skills)
 	{
 		$this->skills()->init($skills);
 	}
