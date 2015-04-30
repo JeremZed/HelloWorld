@@ -51,9 +51,9 @@ abstract class Apparence
 		$this->taille = $taille;
 	}
 	
-	public function setPoids($poids)
+	public function calculPoids()
 	{
-		$this->poids = $poids;
+		// Calcul du poids en fonction de la taille et de la corpulence
 	}
 	
 	public function setPeau(Peau $peau)
