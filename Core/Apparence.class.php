@@ -2,6 +2,11 @@
 
 namespace Core;
 
+use Core\Peau;
+use Core\Cheveux;
+use Core\Pilosite;
+use Core\Corpulence;
+
 abstract class Apparence
 {
 	protected $taille;
