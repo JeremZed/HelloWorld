@@ -3,7 +3,7 @@ namespace Core\Cheveux;
 
 use Core\Cheveux;
 
-class Rouge extends Cheveux
+class Court extends Cheveux
 {
 	public function __construct()
 	{
