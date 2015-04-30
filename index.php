@@ -8,7 +8,8 @@ use Core\Peau\Bleue as PeauBleue;
 use Core\Cheveux\Court as CheveuxCourt;
 use Core\Cheveux\Long as CheveuxLong;
 use Core\Cheveux\Rase as CheveuxRase;
-use Core\Pilosite\Barbe;
+use Core\Pilosite\Barbe as PilositeBarbe;
+use Core\Pilosite\Aucune as PilositeAucune;
 
 
 function my_autoload($class)
@@ -32,4 +33,5 @@ $cheveuxCourt = new CheveuxCourt();
 $cheveuxLong = new CheveuxLong();
 $cheveuxRase = new CheveuxRase();
 
-$barbe = new Barbe();
+$barbe = new PilositeBarbe();
+$barbeNone = new PilositeAucune();
