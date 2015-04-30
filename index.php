@@ -5,6 +5,8 @@ use Core\Sexe\Feminin;
 use Core\Peau\Noire as PeauNoire;
 use Core\Peau\Blanche as PeauBlanche;
 use Core\Peau\Bleue as PeauBleue;
+use Core\Cheveux\Court as CheveuxCourt;
+use Core\Cheveux\Long as CheveuxLong;
 
 
 function my_autoload($class)
@@ -23,3 +25,6 @@ $femme = new Feminin();
 $peauNoire = new PeauNoire();
 $peauBlanche = new PeauBlanche();
 $peauBleue = new PeauBleue();
+
+$cheveuxCourt = new CheveuxCourt();
+$cheveuxLong = new CheveuxLong();
