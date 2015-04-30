@@ -13,6 +13,10 @@ use Core\Pilosite\Aucune as PilositeAucune;
 use Core\Corpulence\Gros as Gros;
 use Core\Corpulence\Mince as Mince;
 use Core\Corpulence\Muscle as Muscle;
+use Core\Race\Humain;
+use Core\Race\Grems;
+use Core\Race\Touchar;
+use Core\Race\Holik;
 
 
 function my_autoload($class)
@@ -42,3 +46,8 @@ $barbeNone = new PilositeAucune();
 $corpsGros = new Gros();
 $corpsMince = new Mince();
 $corpsMuscle = new Muscle();
+
+$humain = new Humain();
+$grems = new Grems();
+$touchar = new Touchar();
+$holik = new Holik();
