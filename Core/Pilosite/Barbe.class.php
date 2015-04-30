@@ -3,7 +3,7 @@ namespace Core\Pilosite;
 
 use Core\Pilosite;
 
-class Rase extends Pilosite
+class Barbe extends Pilosite
 {
 	public function __construct()
 	{
