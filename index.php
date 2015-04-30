@@ -7,6 +7,7 @@ use Core\Peau\Blanche as PeauBlanche;
 use Core\Peau\Bleue as PeauBleue;
 use Core\Cheveux\Court as CheveuxCourt;
 use Core\Cheveux\Long as CheveuxLong;
+use Core\Cheveux\Rase as CheveuxRase;
 
 
 function my_autoload($class)
@@ -28,3 +29,4 @@ $peauBleue = new PeauBleue();
 
 $cheveuxCourt = new CheveuxCourt();
 $cheveuxLong = new CheveuxLong();
+$cheveuxRase = new CheveuxRase();
