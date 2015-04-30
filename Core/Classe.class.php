@@ -28,18 +28,13 @@ abstract class Classe
 		$this->libelle = $libelle;
 	}
 	
-	public function setSkills(Collection $skills)
+	public function setSkills(array $skills)
 	{
-		$this->skills()->init($skills);
+		$this->skills = new Collection($skills);
 	}
 	
 	public function setDescription($description)
 	{
 		$this->description = $description;
-	}
-	
-	public function addSkill(Skill $skill)
-	{
-		$this->skills->push($skill)
 	}
 }
