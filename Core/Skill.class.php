@@ -4,6 +4,10 @@ namespace Core;
 abstract class Skill
 {
 	protected $libelle;
+	protected $description;
+	protected $type;
+	protected $value;
+	protected $caracteristique;
 	
 	public function getLibelle()
 	{
@@ -14,4 +18,5 @@ abstract class Skill
 	{
 		$this->libelle = $libelle;
 	}
+	
 }
