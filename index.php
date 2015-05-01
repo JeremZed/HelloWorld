@@ -50,6 +50,12 @@ use Core\Equipement\OreilleDroite as EOreilleDroite;
 use Core\Equipement\Cou as ECou;
 use Core\Equipement\Bague1 as EBague1;
 use Core\Equipement\Bague2 as EBague2;
+use Core\Stuff;
+use Core\Caracteristique\Vitalite;
+use Core\Caracteristique\Force;
+use Core\Caracteristique\Robustesse;
+use Core\Caracteristique\Precision;
+use Core\Caracteristique\Dexterite;
 
 function my_autoload($class)
 {
@@ -123,3 +129,11 @@ $eoreilledroite = new EOreilleDroite();
 $ecou = new ECou();
 $ebague1 = new EBague1;
 $ebague2 = new EBague2;
+
+$stuff = new Stuff();
+
+$vitalite = new Vitalite();
+$force = new Force();
+$robustesse = new Robustesse();
+$precision = new Precision();
+$dexterite = new Dexterite();

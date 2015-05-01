@@ -4,7 +4,7 @@ namespace Core;
 
 use Core\Collection;
 
-abstract class Stuff
+class Stuff
 {
 	protected $equipements;
 	
