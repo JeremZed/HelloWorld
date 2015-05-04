@@ -153,5 +153,10 @@ abstract class Personnage
     {
         $this->metier = $professions;
     }
+    
+    public function setRecette(Recettes $recettes)
+    {
+        $this->recette = $recettes;
+    }
 
 }
