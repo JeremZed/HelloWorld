@@ -88,5 +88,55 @@ abstract class Personnage
     {
         return $this->recette;
     }
+    
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+    
+    public function setDroitier($droitier)
+    {
+        $this->droitier = $droitier;
+    }
+    
+    public function setGaucher($gaucher)
+    {
+        $this->gaucher = $gaucher;
+    }
+    
+    public function setExperience($exp)
+    {
+        $this->experience = $exp;
+    }
+    
+    public function setSexe(Sexe $sexe)
+    {
+        $this->sexe = $sexe;
+    }
+    
+    public function setApparence(Apparence $apparence)
+    {
+        $this->apparence = $apparence;
+    }
+    
+    public function setRace(Race $race)
+    {
+        $this->race = $race;
+    }
+    
+    public function setClasse(Classe $classe)
+    {
+        $this->classe = $classe;
+    }
+    
+    public function setEquipement(Stuff $stuff)
+    {
+        $this->equipement = $stuff;
+    }
+    
+    public function setCaracteristique(Caracteristiques $carac)
+    {
+        $this->caracteristique = $carac;
+    }
 
 }
