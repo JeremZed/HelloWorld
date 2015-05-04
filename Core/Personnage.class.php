@@ -138,5 +138,20 @@ abstract class Personnage
     {
         $this->caracteristique = $carac;
     }
+    
+    public function setInventaire(Stockage $inventaire)
+    {
+        $this->inventaire = $inventaire;
+    }
+    
+    public function setBanque(Stockage $banque)
+    {
+        $this->banque = $banque;
+    }
+    
+    public function setMetier(Professions $professions)
+    {
+        $this->metier = $professions;
+    }
 
 }
