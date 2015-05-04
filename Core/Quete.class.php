@@ -1,6 +1,9 @@
 <?php 
 namespace Core;
 
+use Core\Collection;
+use Core\Item;
+
 abstract class Quete
 {
 	protected $nom;
