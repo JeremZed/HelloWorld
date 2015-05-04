@@ -2,6 +2,16 @@
 
 namespace Core;
 
+use Core\Sexe;
+use Core\Apparence;
+use Core\Race;
+use Core\Classe;
+use Core\Stuff;
+use Core\Caracteristiques;
+use Core\Stockage;
+use Core\Professions;
+use Core\Recettes;
+
 abstract class Personnage
 {
     protected $nom;
