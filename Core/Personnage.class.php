@@ -73,5 +73,20 @@ abstract class Personnage
     {
         return $this->inventaire;
     }
+    
+    public function getBanque()
+    {
+        return $this->banque;
+    }
+    
+    public function getMetier()
+    {
+        return $this->metier;
+    }
+    
+    public function getRecette()
+    {
+        return $this->recette;
+    }
 
 }
