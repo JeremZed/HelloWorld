@@ -52,8 +52,48 @@ abstract class Quete
 		return $this->realiser;
 	}
 	
-	public function setLibelle($libelle)
+	public function setNom($nom)
 	{
-		$this->libelle = $libelle;
+		$this->nom = $nom;
+	}
+	
+	public function setDescription($description)
+	{
+		$this->description = $description;
+	}
+	
+	public function setRecompenseXp($recompense)
+	{
+		$this->recompenseXp = $recompense;
+	}
+	
+	public function setRecompensePo($recompense)
+	{
+		$this->recompensePo = $recompense;
+	}
+	
+	public function setButin(Collection $items)
+	{
+		$this->butin = $items;
+	}
+	
+	public function addButin(Item $item)
+	{
+		$this->butin->add($item);
+	}
+	
+	public function setNiveau($niveau)
+	{
+		$this->niveau = $niveau;
+	}
+	
+	public function setDependance($dependance)
+	{
+		$this->dependance = $dependance;
+	}
+	
+	public function setRealiser($realiser)
+	{
+		$this->realiser = $realiser;
 	}
 }
