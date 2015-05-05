@@ -2,6 +2,8 @@
 
 namespace Engine;
 
+use Engine\Dispatcher;
+
 class Application
 {
     public function __construct()
@@ -14,7 +16,8 @@ class Application
      */
     public function run()
     {
-        
+        $Dispatcher = new Dispatcher();
+        $Dispatcher->execute();
     }
     
     /**
