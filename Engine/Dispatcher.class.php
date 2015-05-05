@@ -4,16 +4,20 @@ namespace Engine;
 
 class Dispatcher
 {
-    protected $uri;
+    protected $route;
     
-    public function __construct()
+    public function __construct($route=null)
     {
-        $this->uri = $_SERVER['REQUEST_URI'];
+        $this->route = $this->setRoute($route);
+    }
+    
+    public function setRoute($route)
+    {
+        $this->route = $route;
     }
     
     public function execute()
     {
-        
         
     }
 }
