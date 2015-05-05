@@ -2,6 +2,8 @@
 
 namespace Engine;
 
+use Engine\Route;
+
 class Dispatcher
 {
     protected $route;
