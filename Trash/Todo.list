@@ -1,0 +1,8 @@
+- Mettre en place un système qui permet de fusionner toutes les ressources (js, css, images) puis les rendres dispo dans le repertoire
+Public principal.
+
+Car là chaque controller peut avoir ses propres ressources, mais pour y avoir acces il faut un nom à rallonge, en fonction du path du controller
+et de la vue. Donc l'idée là c'est de récupèrer automatiquement les css du repertoire public du controller pour en faire qu'un seul et le mettre dans www/Public.
+
+Idem pour les scripts js, par contre pour les images il faut trouver un autre moyen, car un simple copier coller n'est pas rentable. On va se retrouver
+avec un beau foutoire. Idem pour les css/js, il faut les supprimer en allant....
