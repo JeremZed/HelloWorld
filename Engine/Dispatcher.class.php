@@ -10,4 +10,10 @@ class Dispatcher
     {
         $this->uri = $_SERVER['REQUEST_URI'];
     }
+    
+    public function execute()
+    {
+        
+        
+    }
 }
