@@ -6,6 +6,8 @@ use Engine\Dispatcher;
 
 class Application
 {
+	protected $template;	
+	
     public function __construct()
     {}
     
@@ -13,10 +15,16 @@ class Application
     {
         $Dispatcher = new Dispatcher();
         $Dispatcher->execute();
+        
+        $Template = new Template();
+        $Template->setView( $Dispatcher->getView());
+        $Template->setPathView($Dispatcher->getPathView());
+        
+        $this->template = $Template;        
     }
     
     public function render()
-    {
-        return 'good';
+    {     
+    	return $this->template->render();
     }
 }

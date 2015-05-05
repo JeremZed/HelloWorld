@@ -15,7 +15,7 @@ class Route
     
     public function __construct($route)
     {
-        $this->routes = $this->loadConfig('routes.ini');
+        $this->routes = $this->loadConfig('Config/routes.ini');
         $this->route = $route;
     }
     
@@ -33,7 +33,7 @@ class Route
         }
         else
         {
-            throw new ErrorException('Le fichier de configuration de route <b>' . $filename . '</b> n\'existe pas.');
+            throw new \ErrorException('Le fichier de configuration de route <b>' . $filename . '</b> n\'existe pas.');
         }
     }
     
@@ -44,11 +44,10 @@ class Route
      * @return  boolean
      */
     public function exist()
-    {          
-        $data = $this->routes[$this->route];  
-        if((isset($data)))
+    {        
+        if((isset($this->routes[$this->route])))
         {  
-            $this->hydrate($data);
+            $this->hydrate($this->routes[$this->route]);
             return true;
         }
         
@@ -100,12 +99,12 @@ class Route
     {
         if(!isset($data['controller']))
         {
-            throw new ErrorException('La configuration de la route <b>'.$this->route.'</b> ne possède pas de controller.');
+            throw new \ErrorException('La configuration de la route <b>'.$this->route.'</b> ne possède pas de controller.');
         }
         
         if(!file_exists('Application/'.$data['module'].'/Controller/'.$data['controller'].'Controller.class.php'))
         {
-            throw new ErrorException('Le controller <b>'.$data['controller'].'</b> n\'existe pas dans le module <i>'.$data['module'].'</i>.');
+            throw new \ErrorException('Le controller <b>'.$data['controller'].'</b> n\'existe pas dans le module <i>'.$data['module'].'</i>.');
         }
         
         return true;
@@ -122,7 +121,7 @@ class Route
     {
         if(!isset($data['action']))
         {
-            throw new ErrorException('La configuration de la route <b>'.$this->route.'</b> ne possède pas d\'action.');
+            throw new \ErrorException('La configuration de la route <b>'.$this->route.'</b> ne possède pas d\'action.');
         }
         
         if(file_exists('Application/'.$data['module'].'/Controller/'.$data['controller'].'Controller.class.php'))
@@ -134,7 +133,7 @@ class Route
             
             if(!method_exists($instance, $data['action'].'Action'))
             {
-                throw new ErrorException('L\'action <b>' . $data['action'] . '</b> n\'existe pas pour le controller <i>'.$data['controller'].'</i>');
+                throw new \ErrorException('L\'action <b>' . $data['action'] . '</b> n\'existe pas pour le controller <i>'.$data['controller'].'</i>');
             }
             
             $this->instance_controller = $instance;
@@ -153,12 +152,12 @@ class Route
     {
         if(!isset($data['module']))
         {
-            throw new ErrorException('La configuration de la route <b>'.$this->route.'</b> ne possède pas de module.');
+            throw new \ErrorException('La configuration de la route <b>'.$this->route.'</b> ne possède pas de module.');
         }
         
         if(!file_exists('Application/'.$data['module']))
         {
-            throw new ErrorException('Le module <b>'.$data['module'].'</b> n\'existe pas.');
+            throw new \ErrorException('Le module <b>'.$data['module'].'</b> n\'existe pas.');
         }
     
         return true;

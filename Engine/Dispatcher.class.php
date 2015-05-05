@@ -8,11 +8,15 @@ class Dispatcher
 {
     protected $route;
     protected $_get;
-    protected $_post;        
+    protected $_post; 
+
+    protected $path_view;
+    protected $view;
             
     public function __construct($route=null)
     {
         $this->_get = $_GET;
+        $this->_post = $_POST;
         $this->setRoute($route);
     }
     
@@ -32,7 +36,7 @@ class Dispatcher
         }
         else
         {
-            throw new ErrorException('Aucune route à charger.');
+            throw new \ErrorException('Aucune route à charger.');            
         }            
     }
     
@@ -81,16 +85,40 @@ class Dispatcher
         if($Route->exist())
         {
             $controller = $Route->getController();
-            $action = $Route->getAction().'Action';
+            $action = $Route->getAction();
             $module = $Route->getModule();
+            $methodName = $action.'Action';
+            
+            $this->path_view = 'Application/'.$module.'/View/'.$controller;
+            $this->view = $action;
             
             $instanceController = $Route->getInstanceController();
-            $instanceController->$action();
+            $instanceController->$methodName($this); 
             
         }
         else
         {
-            throw new ErrorException('Cette route ' . $this->route . ' n\'existe pas.');
+            throw new \ErrorException('Cette route <b>' . $this->route . '</b> n\'existe pas.');
         }
+    }
+    
+    public function getPathView()
+    {
+    	return $this->path_view;
+    }
+    
+    public function getView()
+    {
+    	return $this->view;
+    } 
+    
+    public function setView($view)
+    {
+    	$this->view = $view;
+    }
+    
+    public function setPathView($path)
+    {
+    	$this->path_view = $path;
     }
 }
