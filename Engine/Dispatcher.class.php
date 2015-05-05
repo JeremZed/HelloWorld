@@ -8,7 +8,7 @@ class Dispatcher
 {
     protected $route;
     protected $_get;
-    protected $_post;
+    protected $_post;        
             
     public function __construct($route=null)
     {
@@ -81,7 +81,12 @@ class Dispatcher
         if($Route->exist())
         {
             $controller = $Route->getController();
-            $action = $Route->getAction();                
+            $action = $Route->getAction().'Action';
+            $module = $Route->getModule();
+            
+            $instanceController = $Route->getInstanceController();
+            $instanceController->$action();
+            
         }
         else
         {
