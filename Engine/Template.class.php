@@ -9,10 +9,7 @@ class Template
 	protected $view;
 	protected $path_view;
 	
-	public function __construct()
-	{
-		
-	}
+	public function __construct(){}
 	
 	public function setView($view)
 	{
@@ -34,7 +31,6 @@ class Template
 		$twig = new \Twig_Environment($loader, array());
 		
 		$template = $twig->loadTemplate($this->view.'.html');
-		return $template->render(array());
-		
+		return $template->render(View::getVarAll());		
 	}
 }
