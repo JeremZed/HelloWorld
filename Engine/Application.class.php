@@ -3,9 +3,11 @@
 namespace Engine;
 
 use Engine\Dispatcher;
+use Engine\Fusion;
 
 class Application
 {
+	
 	protected $template;	
 	
     public function __construct()
@@ -26,5 +28,14 @@ class Application
     public function render()
     {     
     	return $this->template->render();
+    }
+    
+    public function generateCSS($generate=false)
+    {
+        if($generate)
+        {
+            $Fusion = new Fusion;
+            $Fusion->run();
+        }
     }
 }
