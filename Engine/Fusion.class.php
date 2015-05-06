@@ -76,13 +76,32 @@ class Fusion
         {
             $content = file_get_contents($file);
             
-            file_put_contents(self::$destination, $content, FILE_APPEND);
+            file_put_contents(self::$destination, self::minificator($content), FILE_APPEND);
         }
         
         if(count(self::$css_files) == 0)
         {
             file_put_contents(self::$destination, '');
         }
+    }
+    
+    /**
+     * @desc    Permet de minifier le script css
+     **/
+    public static function minificator($css) 
+    {
+    	$css = preg_replace( '#\s+#', ' ', $css );
+    	$css = preg_replace( '#/\*.*?\*/#s', '', $css );
+    	$css = str_replace( '; ', ';', $css );
+    	$css = str_replace( ': ', ':', $css );
+    	$css = str_replace( ' :', ':', $css );
+    	$css = str_replace( ' {', '{', $css );
+    	$css = str_replace( '{ ', '{', $css );
+    	$css = str_replace( ', ', ',', $css );
+    	$css = str_replace( '} ', '}', $css );
+    	$css = str_replace( ';}', '}', $css );
+    
+    	return trim( $css );
     }
     
     /**
