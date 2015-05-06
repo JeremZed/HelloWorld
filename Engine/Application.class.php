@@ -34,8 +34,7 @@ class Application
     {
         if($generate)
         {
-            $Fusion = new Fusion;
-            $Fusion->run();
+            $Fusion = Fusion::run();
         }
     }
 }
