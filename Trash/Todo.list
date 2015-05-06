@@ -6,3 +6,7 @@ et de la vue. Donc l'idée là c'est de récupèrer automatiquement les css du r
 
 Idem pour les scripts js, par contre pour les images il faut trouver un autre moyen, car un simple copier coller n'est pas rentable. On va se retrouver
 avec un beau foutoire. Idem pour les css/js, il faut les supprimer en allant....
+
+---------------------------------------------------------------------------------------------
+
+    FAIT pour les fichiers CSS, il reste à minifier les sources après la fusion.
