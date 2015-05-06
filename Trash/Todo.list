@@ -10,3 +10,5 @@ avec un beau foutoire. Idem pour les css/js, il faut les supprimer en allant....
 ---------------------------------------------------------------------------------------------
 
     FAIT pour les fichiers CSS, il reste à minifier les sources après la fusion.
+    FAIT le minificateur pour les CSS, 
+        - il reste à faire la solution identique mais pour les fichiers JS
