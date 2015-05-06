@@ -14,6 +14,7 @@ spl_autoload_register('my_autoload');
 try{
 	
 	$Application = new Application();
+	$Application->generateCSS(true); // true en dev, false en prod
 	$Application->run();
 	
 	$render = $Application->render();
