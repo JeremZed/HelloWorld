@@ -5,26 +5,26 @@ namespace Engine;
 class Fusion
 {
     
-    protected $destination = './Public/css/css.global.css';
-    protected $css_files = array();
+    protected static $destination = './Public/css/css.global.css';
+    protected static $css_files = array();
     
     /**
      * @desc    Lance la fusion de tous les CSS des modules
      */
-    public function run()
+    public static function run()
     {
-        if(file_exists($this->destination))
-            unlink($this->destination);
+        if(file_exists(self::$destination))
+            unlink(self::$destination);
         
-        $this->parcours('./Application');
-        $this->fusionContent();
+        self::parcours('./Application');
+        self::fusionContent();
     }
     
     /**
      * @desc    permet de parcourir tous les répertoire de l'application à la recherche un d'un dossier "public"
      * @param unknown $rep
      */
-    public function parcours($rep)
+    public static function parcours($rep)
     {
         $list = scandir($rep);
         $path = $rep.'/';
@@ -37,9 +37,9 @@ class Fusion
             {                    
                 if($element == 'public')
                 {
-                    $this->parcoursCSS($element, $path);                     
+                    self::parcoursCSS($element, $path);                     
                 }                                        
-                $this->parcours($path.$element);
+                self::parcours($path.$element);
             }
         }
     }
@@ -49,7 +49,7 @@ class Fusion
      * @param unknown $rep
      * @param unknown $path
      */
-    public function parcoursCSS($rep, $path)
+    public static function parcoursCSS($rep, $path)
     {
         $list = scandir($path.'/'.$rep);        
         unset($list[0], $list[1]);
@@ -62,7 +62,7 @@ class Fusion
                 unset($files[0], $files[1]);
                 
                 foreach($files as $name)
-                    $this->css_files[] = $path.''.$rep.'/'.$element.'/'.$name;
+                    self::$css_files[] = $path.''.$rep.'/'.$element.'/'.$name;
             }
         }
     }
@@ -70,42 +70,42 @@ class Fusion
     /**
      * @desc    Concatène le contenu de tous les fichiers css en un seul fichier
      */
-    public function fusionContent()
+    public static function fusionContent()
     {
-        foreach($this->css_files as $file)
+        foreach(self::$css_files as $file)
         {
             $content = file_get_contents($file);
             
-            file_put_contents($this->destination, $content, FILE_APPEND);
+            file_put_contents(self::$destination, $content, FILE_APPEND);
         }
         
-        if(count($this->css_files) == 0)
+        if(count(self::$css_files) == 0)
         {
-            file_put_contents($this->destination, '');
+            file_put_contents(self::$destination, '');
         }
     }
     
     /**
      * @desc    Getter des fichiers css trouvés
      */
-    public function getCssFiles()
+    public static function getCssFiles()
     {
-        return $this->css_files;
+        return self::$css_files;
     }
     
     /**
      * @desc    Getter du fichier de destination 
      **/
-    public function getDestination()
+    public static function getDestination()
     {
-        return $this->destination;
+        return self::$destination;
     }
     
     /**
      * @desc    setter du fichier de destination
      * */
-    public function setDestination($path)
+    public static function setDestination($path)
     {
-        $this->destination = $path;
+        self::$destination = $path;
     }
 }
