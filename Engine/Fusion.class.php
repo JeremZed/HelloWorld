@@ -92,4 +92,20 @@ class Fusion
     {
         return $this->css_files;
     }
+    
+    /**
+     * @desc    Getter du fichier de destination 
+     **/
+    public function getDestination()
+    {
+        return $this->destination;
+    }
+    
+    /**
+     * @desc    setter du fichier de destination
+     * */
+    public function setDestination($path)
+    {
+        $this->destination = $path;
+    }
 }
