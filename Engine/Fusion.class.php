@@ -108,4 +108,13 @@ class Fusion
     {
         self::$destination = $path;
     }
+    
+    /**
+     * @desc    permet d'ajouter un fichier dans la pile des fichiers css à fusionner
+     * @param unknown $file
+     */
+    public static function addCSSFiles($file)
+    {
+        self::$css_files[] = $file;
+    }
 }
