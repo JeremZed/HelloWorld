@@ -6,10 +6,10 @@ requirejs.config({
 });
 
 
-requirejs(['app/wait'], function(Wait){
+requirejs(['app/loader'], function(Loader){
 	
 	$(document).ready(function(){
-		Wait.init('index');
+		Loader.init('index');
 	});
 	
 });
