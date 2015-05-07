@@ -7,17 +7,18 @@ define(function (require) {
     	},
     	loader : function(flag){
     		
-    		var save = this.getSave();
-    		
     		$.ajax({
         		  method: "GET",
         		  url: "Loader.php",
-        		  data: { route: flag, save : save },
+        		  data: { route: flag, save : objet.getSave() },
                       beforeSend: function(){
                 	  $('#loader').modal('show');   
 	              },
 	              success: function(response){
-	            	  $('#content').html(response);
+	            	  
+	            	  var data = jQuery.parseJSON(response);
+	            	  
+	            	  $('#content').html(data.RENDER);
 	              	  	  
 	            	  $('[data-link]').click(function(){    
 	                	     _view = $(this).attr('data-link');
@@ -28,12 +29,12 @@ define(function (require) {
 	              },
         	});
     	},
-    	getSave : function()
-    	{
-    		
+    	
+    	getSave : function(){    		   		
+    		return sessionStorage.getItem("save");    		
     	},
-    	init : function(view)
-    	{
+    	
+    	init : function(view){
     		this.createLoader();
     		this.loader(view);
     	},
