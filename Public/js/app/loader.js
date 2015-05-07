@@ -6,11 +6,14 @@ define(function (require) {
     		$('body').append(this.modal);
     	},
     	loader : function(flag){
+    		
+    		var save = this.getSave();
+    		
     		$.ajax({
         		  method: "GET",
         		  url: "Loader.php",
-        		  data: { route: flag },
-                  beforeSend: function(){
+        		  data: { route: flag, save : save },
+                      beforeSend: function(){
                 	  $('#loader').modal('show');   
 	              },
 	              success: function(response){
@@ -24,6 +27,10 @@ define(function (require) {
 	            	  $('#loader').modal('hide');
 	              },
         	});
+    	},
+    	getSave : function()
+    	{
+    		
     	},
     	init : function(view)
     	{
