@@ -25,4 +25,7 @@ catch(Exception $e)
 	$render = 'Warning : ' . $e->getMessage();
 }
 
-echo $render;
+$data = array();
+$data['RENDER'] = $render;
+
+echo json_encode($data);
