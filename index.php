@@ -20,8 +20,8 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <div id="content" ></div>
+    <h1>~~ Hello World! ~~</h1>
+    <div class="container"><div id="content" ></div></div>
     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

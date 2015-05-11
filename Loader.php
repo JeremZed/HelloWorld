@@ -18,6 +18,8 @@ try{
 	$Application->run();
 	
 	$render = $Application->render();
+
+	$debug = $Application->debug();
 	
 }
 catch(Exception $e)
@@ -27,5 +29,6 @@ catch(Exception $e)
 
 $data = array();
 $data['RENDER'] = $render;
+$data['DEBUG'] = $debug;
 
 echo json_encode($data);

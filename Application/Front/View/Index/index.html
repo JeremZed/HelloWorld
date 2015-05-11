@@ -1,3 +1,29 @@
-coucou vue!<br />
-<span data-link="home" >Home</span><br />
-{{toto}}
+<div class="jumbotron col-md-12">
+	<h1>Création de personnage</h1>
+	<form name="form-create" action="create-perso" method="post" >
+		<p class="lead center-block" style="width : 50%;"><br /><input class="form-control" type="text" placeholder="Nom du personnage" name="name" /><br /></p>		
+		
+		<div class="col-md-4" >
+			Choisissez parmis 3 classes différentes.<br />
+			<label for="guerrier">Guerrier</label> <input type="radio" name="classe" value="guerrier" id="guerrier" />
+			<label for="rodeur">Rodeur</label> <input type="radio" name="classe" value="rodeur" id="rodeur" />
+			<label for="mage" >Mage</label> <input type="radio" name="classe" value="mage" id="mage" />
+			<label for="moine">Moine</label> <input type="radio" name="classe" value="moine" id="moine" />
+		</div>
+		
+		<div class="col-md-4" >
+			Est-il droitier ou gaucher ?<br />
+			<label for="droitier">Droitier</label> <input type="radio" name="main" value="droitier" id="droitier" />
+			<label for="gaucher">Gaucher</label> <input type="radio" name="main" value="gaucher" id="gaucher" />
+		</div>
+		
+		<div class="col-md-4" >
+			Est-il un Homme ou une Femme ?<br />
+			<label for="homme">Homme</label> <input type="radio" name="sexe" value="homme" id="homme" />
+			<label for="femme">Femme</label> <input type="radio" name="sexe" value="femme" id="femme" />
+		</div>
+		
+		<div class="clearix" ></div>
+		<p><br /><br /><br /><input type="submit" name="submit" value="Créer mon personnage" class="btn btn-lg btn-primary" /></p>
+	</form>
+</div>

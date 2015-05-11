@@ -5,33 +5,41 @@ define(function (require) {
     	createLoader : function(){    		
     		$('body').append(this.modal);
     	},
-    	loader : function(flag){
+    	loader : function(flag, dataURL){
     		
     		$.ajax({
         		  method: "GET",
         		  url: "Loader.php",
-        		  data: { route: flag, save : objet.getSave() },
+        		  data: { route: flag, data : dataURL },
                       beforeSend: function(){
                 	  $('#loader').modal('show');   
 	              },
 	              success: function(response){
 	            	  
 	            	  var data = jQuery.parseJSON(response);
-	            	  
+	            	  	            	  
 	            	  $('#content').html(data.RENDER);
-	              	  	  
+	            	  
+	              	  
+	            	  // Gestion des routes avec les liens
 	            	  $('[data-link]').click(function(){    
 	                	     _view = $(this).attr('data-link');
 	                	     objet.loader(_view);
+	             	  });
+	            	  
+	            	  // Gestion des routes avec les formulaires
+	            	  $('input[type=submit]').click(function(){
+	            		  
+	            		  	 var form = $(this).closest('form');
+	            		  	 _view = form.attr('action');
+	            		  	 objet.loader(_view, form.serialize());
+	            		  	 
+	                	     return false;
 	             	  });
 	                	  
 	            	  $('#loader').modal('hide');
 	              },
         	});
-    	},
-    	
-    	getSave : function(){    		   		
-    		return sessionStorage.getItem("save");    		
     	},
     	
     	init : function(view){

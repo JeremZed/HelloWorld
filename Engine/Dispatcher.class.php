@@ -67,6 +67,23 @@ class Dispatcher
     }
     
     /**
+     * @desc    Permet de retourner la valeur du $_POST en fonction de sa clé, sinon null
+     * @param mixed $key
+     * @return NULL
+     */
+    public function post($key)
+    {
+    	if(isset($this->_post[$key]))
+    	{
+    		return $this->_post[$key];
+    	}
+    	else
+    	{
+    		return null;
+    	}
+    }
+    
+    /**
      * @desc    Permet de savoir si une variable $_GET existe en indiquant son nom
      * @param mixed $key
      */

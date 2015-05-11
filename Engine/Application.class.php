@@ -4,6 +4,7 @@ namespace Engine;
 
 use Engine\Dispatcher;
 use Engine\Fusion;
+use Engine\MyDebug;
 
 class Application
 {
@@ -28,6 +29,11 @@ class Application
     public function render()
     {     
     	return $this->template->render();
+    }
+    
+    public function debug()
+    {
+    	return MyDebug::getBugsAll();
     }
     
     public function generateCSS($generate=false)
